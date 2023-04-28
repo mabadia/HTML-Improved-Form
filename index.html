@@ -18,10 +18,16 @@
       <div>
         <label for="firstname">Your First Name</label><span class="required-field">*</span>
 
-        <input type="text" id="firstname" name="firstname" required>
+        <input type="text" id="firstname" name="firstname" minlength="2" maxlength="35" required>
         <label for="lastname">Your Last Name</label><span class="required-field">*</span>
 
-        <input type="text" id="lastname" name="lastname" required>
+        <input type="text" id="lastname" name="lastname"  minlength="2" maxlength="35" required>
+        <label for="age">Your Age</label>
+        <input type="number" name="age" id="age" minlength="21" maxlength="150" required>
+        <h5><span class="required-field">*</span>Must be 21 or older to enter.</h5>
+        <label for="pwd">Your Secret Code (must be 6 alphanumeric characters)</label><span class="required-field">*</span>
+        <input type="password" name="password" id="password" title="6 Alphanumeric Character Passcode" pattern="[0-9a-zA-Z]{6}" required>
+        
       </div>
       <fieldset>
         <legend>Your Contact Info</legend>
@@ -91,7 +97,7 @@
             <option value="WY">Wyoming</option>
           </datalist>
           <label for="zip">Your Zipcode</label>
-          <input type="text" id="zip" name="zip">
+          <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="5-Digit US ZIP Code">
         </div>
       </fieldset>
 
